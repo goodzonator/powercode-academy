@@ -1,0 +1,94 @@
+/** Базовые анимации: */
+@import 'keyframes';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    @media (min-width: 1280px) {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            top: 242px;
+            width: 199px;
+            height: 383px;
+            background: url("../images/technologies.png") no-repeat;
+            background-size: contain !important;
+        }
+    }
+    @media (max-width: 1439px) {
+        &:before {
+            top: 260px;
+            width: 145px;
+            height: 279px;
+        }
+    }
+}
+
+.page {
+    position: relative;
+    flex: 1 1 auto;
+    &:before {
+        content: "";
+        width: 1200px;
+        height: 1200px;
+        background: radial-gradient(circle, #332f65 0, transparent 70%);
+        position: absolute;
+        bottom: -300px;
+        left: -300px;
+    }
+    @media (min-width: $th) {
+        &:before {
+            left: auto;
+            bottom: -200px;
+            right: -300px;
+        }
+    }
+    @media (min-width: $ds) {
+        &:before {
+            left: auto;
+            bottom: auto;
+            right: -600px;
+            top: -600px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: -350px;
+            left: -250px;
+            background: radial-gradient(circle, #332f65 0, transparent 70%);
+        }
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    @media (min-width: $ds) {
+        width: calc(928px + 32px);
+    }
+}
+
+@media (min-width: $tv) {
+    .hide-tablet {
+        display: none;
+    }
+}
+@media (max-width: $mobile) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: $device) {
+    .hide-device {
+        display: none;
+    }
+}

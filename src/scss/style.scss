@@ -1,0 +1,46 @@
+@use 'sass:math';
+
+/**
+* Подключение шрифтов локально из папки "./src/fonts"
+*/
+@import 'config/fonts';
+
+/** Подключение переменных */
+@import 'config/vars';
+
+/**
+* Подключение sass functions
+*/
+@import 'config/functions';
+
+/** Обнуление */
+@import 'config/reset';
+
+/**
+* Библиотеки
+*/
+//@import 'libs/swiper';
+//@import 'libs/choices';
+@import 'libs/intlTelInput';
+
+/**
+* Общие параметры, шаблоны(заготовки) и вспомогательные классы
+*/
+@import 'config/base';
+@import 'config/scrollbar';
+
+/**
+* Заголовки и прочие классы касательно текста
+*/
+@import 'config/typography';
+
+/**
+* Подключение стилей повторяющихся блоков
+*/
+@import "components";
+
+
+/**
+* Подключение стилей отдельных страниц
+*/
+@import "pages/main-page";

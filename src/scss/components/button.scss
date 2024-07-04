@@ -1,0 +1,27 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 222.25px;
+    margin: 0 auto;
+    height: 45.55px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    background: $blue-light;
+    border-radius: 4.48px;
+    &:hover {
+        background: $blue;
+    }
+    @media (min-width: $ds) {
+        width: 100%;
+        height: 51px;
+        font-size: 15px;
+        line-height: 24px;
+        background-color: $red;
+        border-radius: 5px;
+        &:hover {
+            background-color: #cd2645;
+        }
+    }
+}

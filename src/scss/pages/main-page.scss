@@ -1,0 +1,311 @@
+.webinar {
+    max-width: 100%;
+    width: 560px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 59px;
+    &__content {
+        text-align: center;
+        h1 {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 600;
+            .red {
+                font-size: 52.73px;
+                line-height: 64.59px;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: $red;
+            }
+            .bg-red {
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                margin-right: 19.67px;
+                padding-left: 10px;
+                //padding-top: 2px;
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 20.56px;
+                font-weight: 800;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: -4.8px;
+                    right: -10.28px;
+                    left: -0.35px;
+                    bottom: -2.18px;
+                    background: #ff3459;
+                    border-radius: 3.57px;
+                    transform: rotate(-3.49deg);
+                }
+            }
+        }
+        p {
+            margin-top: 23px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21.33px;
+        }
+    }
+    &__subtitle {
+        display: inline-flex;
+        align-items: center;
+        gap: 4.8px;
+        padding: 3px 10px;
+        line-height: 18px;
+        font-weight: 600;
+        background: $blue;
+        border-radius: 3px;
+    }
+
+    &__form {
+        margin-top: 20px;
+        padding: 41px 21px 40px;
+        text-align: center;
+        background: $dark-extra-light;
+        border-radius: 8.96px;
+        box-shadow: 0 8.96px 44.81px 0 rgba(40, 127, 165, 0.1);
+        &.success {
+            & > *:not(.webinar__form-success-text) {
+               display: none;
+            }
+            .webinar__form-success-text {
+                display: block;
+            }
+        }
+        h2 {
+            margin-bottom: 18px;
+            font-size: 20px;
+            line-height: 23.5px;
+            font-weight: bold;
+            span {
+                color: $red;
+            }
+        }
+        .form__group:not(:last-child) {
+            margin-bottom: 14px;
+        }
+        .form__input {
+            display: block;
+            width: 100%;
+            height: 46px;
+            padding: 0 26.29px;
+            background: $dark-light;
+            border-radius: 4.48px;
+            &::placeholder {
+                color: $white;
+            }
+            &:focus {
+                background: #1d212c;
+            }
+            &-error {
+                margin-top: 4px;
+                text-align: left;
+                color: #ff3459;
+                &:empty {
+                    display: none;
+                }
+            }
+        }
+        p {
+            margin-top: 19px;
+            font-size: 11px;
+            line-height: 16.39px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        &-success-text {
+            display: none;
+        }
+    }
+
+    &__additional-info {
+        margin: 36px auto 0;
+        width: 224px;
+        li {
+            display: flex;
+            align-items: center;
+            gap: 16.19px;
+            &:not(:last-child) {
+                margin-bottom: 19px;
+            }
+            &:first-child .content {
+                line-height: 17px;
+            }
+            &:nth-child(2) {
+                align-items: flex-start;
+                gap: 11px;
+                padding-right: 1px;
+            }
+            picture {
+                flex-shrink: 0;
+                margin-top: 1px;
+            }
+            .title {
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: bold;
+                span {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media (min-width: $tv) {
+        &__additional-info {
+            display: flex;
+            flex-direction: column;
+            width: 420px;
+            gap: 15px;
+            li {
+                gap: 30.19px;
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+                &:first-child {
+                    order: 1;
+
+                    picture {
+                        margin-top: -4px;
+                    }
+                    img {
+                        width: 38px;
+                        height: 38px;
+                    }
+                    .content {
+                        width: 210px;
+                        line-height: 18px;
+                    }
+                }
+                &:nth-child(2) {
+                    gap: 17px;
+                    .title {
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
+                    .content {
+                        padding-top: 3px;
+                    }
+                }
+                .title {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        width: auto;
+        padding-top: 102px;
+        padding-bottom: 150px;
+        &:has(.error) {
+            padding-bottom: 200px;
+        }
+        &__content {
+            width: 427px;
+            text-align: left;
+            h1 {
+                font-size: 22px;
+                line-height: 40px;
+
+                .red {
+                    font-size: 77px;
+                    line-height: 94px;
+                }
+                .bg-red {
+                    margin-right: 24px;
+                    padding-left: 13.4px;
+                    font-size: 23.64px;
+                    line-height: 29px;
+                    &:before {
+                        top: -5px;
+                        right: -12px;
+                        left: 0;
+                        bottom: -5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            p {
+                margin-top: 25px;
+                font-size: 18px;
+                line-height: 26.8px;
+            }
+        }
+        &__subtitle {
+            padding: 4px 13px 4px 14px;
+            gap: 6px;
+            font-size: 16px;
+            line-height: 24px;
+            svg {
+                width: 19px;
+                height: 19px;
+            }
+        }
+        &__form {
+            width: 366px;
+            position: absolute;
+            right: 0;
+            top: 92px;
+            margin-top: 0;
+            padding: 50px 58px;
+            border-radius: 10px;
+            h2 {
+                margin-bottom: 20px;
+                font-size: 22px;
+                line-height: 26px;
+            }
+            .form__input {
+                height: 51px;
+                padding: 0 23px;
+                font-size: 13px;
+                &::placeholder {
+                    color: #D7D7D7;
+                }
+            }
+            p {
+                margin-top: 20px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        &__additional-info {
+            margin: 58px 0 0;
+        }
+        &__frontend {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -42px;
+            font-weight: 800;
+            font-size: 129.36px;
+            line-height: 158.46px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            color: #242731;
+            text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.05), 1px -1px 0 rgba(255, 255, 255, 0.05), -1px 1px 0 rgba(255, 255, 255, 0.05),   1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+    }
+    @media (max-width: 359px) {
+        &__content {
+            h1 {
+                font-size: 13px;
+
+                .red {
+                    font-size: 48px;
+                    line-height: 59px;
+                }
+
+                .bg-red {
+                    font-size: 15px;
+                }
+            }
+            p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

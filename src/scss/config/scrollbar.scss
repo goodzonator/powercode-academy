@@ -1,0 +1,29 @@
+// Firefox
+@media (min-width: $ds) {
+  * {
+    scrollbar-width: rem(8);
+    //scrollbar-color: var(--primary-color) #d6d6d6;
+    scrollbar-color: $dark;
+
+    // Chrome, Edge, and Safari
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: rem(4);
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: rem(8);
+      border: 0 none $white;
+      background-color: $dark;
+
+      &:hover {
+        //background-color: var(--primary-hover-color);
+      }
+    }
+  }
+}
